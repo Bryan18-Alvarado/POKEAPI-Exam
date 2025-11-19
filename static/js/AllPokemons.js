@@ -8,23 +8,20 @@ const getPokemonNames = async () => {
     .catch((error) => console.log('Error fetching pokemos:', error))
 }
 
-const renderPokemonNames = (pokemons) => {
-  listPokemonNames.innerHTML = ''
-  let html = ''
-  pokemons.results.forEach((pokemon) => {
-    html += `<div class="card">
-                <div class="margin-10">
-                    <span onclick="openPokemon(${pokemon.name})">
-                    <h3>${pokemon.name}</h3>
-                  </span>
-                </div>
-              </div>`
-  })
-  listPokemonNames.innerHTML = html
+const renderPokemons = (pokemons) => {
+  listPokemonNames.innerHTML = pokemons.results
+    .map((pokemon) => {
+      const id = pokemon.url.split('/').filter(Boolean).pop()
+      return `<div class="list-item">
+              <a href="DetailsPokemon.html?id=${id}">#${id} - ${pokemon.name}</a>
+            </div>`
+    })
+    .join('')
 }
 
-const openPokemonNames = async () => {
+const init = async () => {
   const pokemons = await getPokemonNames()
-  renderPokemonNames(pokemons)
+  renderPokemons(pokemons)
 }
-openPokemonNames()
+
+init()

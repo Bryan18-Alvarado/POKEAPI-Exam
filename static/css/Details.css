@@ -1,0 +1,142 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #cef4f6;
+  color: #c00;
+}
+
+.container-poke {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+#poke-details .detail {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 1px solid rgba(200,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#poke-details .detail:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+#poke-details .detail h1 {
+  text-transform: capitalize;
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: #c00;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#poke-details .detail:hover h1 {
+  color: #ffcb05;
+  text-shadow: 0 0 12px #ffcb05;
+}
+
+#poke-details .detail .content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#poke-details .detail img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+#poke-details .detail:hover img {
+  transform: scale(1.05);
+}
+
+#poke-details .detail .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
+}
+
+#poke-details .detail .info .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#poke-details .detail .info h3 {
+  margin: 0;
+  font-weight: 700;
+  color: #c00;
+}
+
+#poke-details .detail .info span {
+  font-weight: 500;
+  color: #555;
+}
+
+#poke-details .detail .types {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+#poke-details .detail .types .type {
+  background-color: #c00;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+#poke-details .detail .types .type:hover {
+  background-color: #ffcb05;
+  color: #c00;
+}
+
+#poke-details .detail .btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffcb05;
+  color: #c00;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+#poke-details .detail .btn:hover {
+  color: #000000;
+  background-color: #7ae4c1;
+  border-color: #ffcb05;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+#poke-details h1 {
+  color: #c00;
+  text-align: center;
+  margin-top: 2rem;
+  text-shadow: 0 0 5px rgba(255,0,0,0.3);
+}
