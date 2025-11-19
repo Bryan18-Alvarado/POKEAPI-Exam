@@ -41,7 +41,7 @@ const renderPokemon = (pokemon) => {
           </div>
         </div>
       </div>
-      <a href="pokemonsEvolutions.html?id=${
+      <a href="EvolutionsPokemon.html?id=${
         pokemon.id
       }" class="btn">Mostrar Evoluciones</a>
     </div>
@@ -50,6 +50,7 @@ const renderPokemon = (pokemon) => {
 
 const init = async () => {
   const id = PokemonId()
+  //TODO: si no encontramos id, mostrar mensaje de error
   if (!id) {
     detailsPokemons.innerHTML = '<h1>No se encontró el pokemon</h1>'
     return
