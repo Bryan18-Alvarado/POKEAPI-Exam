@@ -65,6 +65,10 @@ const renderEvolutionChain = (evolutionDetails) => {
     </div>
   `
 }
+const backButton = document.getElementById('back-btn')
+backButton.addEventListener('click', () => {
+  history.back()
+})
 
 const initEvolutions = async () => {
   const pokeId = PokemonIdUrl()
